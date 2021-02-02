@@ -1,2 +1,2 @@
 # web
-this is for html/css files for into2
+this is for html/css files for intro2
