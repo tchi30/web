@@ -1,8 +1,14 @@
 body {
-  background-color : turquoise;
+  background-color: turquoise;
 }
 
 p {
-  background-color : purple;
+  background-color: purple;
   color: orange;
+  font-style: italic;
+  line-height: 2.5;
+}
+
+h2 {
+  font: italic small-caps bold 16px/2 cursive;
 }
