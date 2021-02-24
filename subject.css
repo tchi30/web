@@ -19,6 +19,14 @@ h2 {
   color: #6600CC;
 }
 
-header {
+nav {
   background-color: #222;
+}
+
+nav a {
+  color: #55d6aa;
+}
+
+nav a:hover {
+  font-style: italic;
 }
