@@ -30,7 +30,7 @@ nav a {
 }
 
 nav li {
-  display: inline block;
+  display: inline-block;
   margin-left: 80 px;
   padding-top: 20 px;
 }
