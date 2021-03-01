@@ -46,10 +46,6 @@ nav a.active {
 	font-style: italic;
 }
 
-li {
-  list-style-type: none;
-}
-
 .picture_place {
 	width: 100%;
 	height: 620px;
