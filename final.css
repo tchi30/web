@@ -1,0 +1,19 @@
+* {
+	background-color: Tan;
+	font-family: "monaco";
+}
+
+hr {
+  	width: 50%;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+p {
+	border: 2px solid;
+	padding: 15px;
+	margin: 15px;
+}
+
