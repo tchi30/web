@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	  <title>Chess: The Game [Python Edition]</title>
+	  
+	  <link href="final.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1>Chess: The Game [Python Edition]</h1>
+    <h2>Joseph Wu, Taee Chi, Julian Duran, Period 4</h2>
+    <hr>
+    <ul>
+      <li>
+	<h3>Project Description</h3>
+	<p>This is an implementation of the board game of Chess into Python. Two players will be able to compete against each other by inputing movements which will direct their pieces on the chess board.</p>	
+      </li>
+      <li>
+	<h3>Instructions</h3>
+	<p>One of the players will run the program, which will set up the chess board and its pieces on the screen. Then, Player 1 will input their move in the Thonny Shell. For example, if they want to move a pawn to G5, they should just input G5. However, if they want to move a piece other than the pawn, they have to specify: N for Knight (Ng5). After Player 1 inputs a move, the chess piece will move accordingly and will be Player 2's turn to input a move. This cycle will keep repeating until a checkmate has been reached. Keep in mind that if there is an invalid move, the program will tell you so and you will be forced to input a different move. Additionally, if there are two identical pieces that can move to the same spot on the board, the player will be asked to specify which piece. For example, if the player wants to move a Knight to E6 but there are two possible knights that can be moved to that location, then the program will ask the player to specify which knight they would like to move. * Q + (coordinate) = Queen move, R + (coordinate) = Rook move, B + (coordinate) = Bishop move, N + (coordinate) = Knight move, K + (coordinate) = King move, (coordinate; have to capitalize) = Pawn move * Example of a coordinate: e5</p>
+      </li>
+      <li>
+	<h3>How it works</h3>
+	<p>The player opens "chessprototype.py". From there, the linked program, "chess_online.py", draws the chess board. The program draws the board by using a turtle as well as "while" loops to draw colored-in squares for the chess board. The linked program "pieces.py" places the chess pieces on the board. The program "pieces.py" places 32 turtles on the chess board and sets their shape to their corresponding chess piece. It does this by using the ".addshape()" function as well as a custom "place" function that moves each turtle to its respective position on the board. After the board is set up, "chessprotoype.py" asks the player for a move, similar to "Madlibs!". If the input isn't in chess notation, the program will either print an "Invalid move, try again" or an error which will cause the program to stop which you will then have to restart. If the input is in chess notation with the help of "chesshelp.py", the program checks if the player's input is a valid move. It does this by taking the location of the piece that is to be moved, as well as its teammates and enemy pieces. From there it outputs a list of moves that the piece can take. If the player's input is in that list of moves, the corresponding piece on the board will move accordingly. After Player 1 moves, "chessprototype.py" adds 1 to the counter (If the counter is odd, it is Player 1's turn. If it is even, it is Player 2's turn) and it then becomes Player 2's turn to input a move. Player 2 then inputs a move and the whole cycle repeats again. When the players reach the point of checking the king, the player must move to protect the king or else it will return "Invalid move, try again", however, the players can't place the king into the direct line of fire. Some available moves will be printed to help guide the player using the "counter_check" function. If the players no longer have a valid move, it is game over.</p>
+      </li>
+      <li>
+	<h3>Files</h3>
+	<ul>
+	  <li>pieces.py: This Python program creates a turtle for each piece on the board (32 pieces = 32 turtles). It utilizes a custom "place" function to set each of these turtles to their designated location on the board. </li>
+	  <li>Chesshelp.py: Python program which checks the valid moves for each piece. It outputs the valid moves. It takes location of the piece and its corresponding teammates along with the location of the enemies as inputs. </li>
+	  <li>chess_online.py: Python program which draws the board and moves the turtles. </li>
+	  <li>chessprototype.py: Links the three previous Python programs together. It is where the player inputs the moves and also checks if the king is in danger.</li>
+	  <li>final.html: This html file contains all the information regarding our project and how to use it</li>
+	</ul>
+      </li>
+      <li>
+	<h3>Resources</h3>
+	<ul>
+	  <li>To Utilize Break Function: <a href = "https://www.digitalocean.com/community/tutorials/how-to-use-break-continue-and-pass-statements-when-working-with-loops-in-python-3">Break</a></li>
+	  <li>Attaching Images to Turtles: <a href = "https://pythonguides.com/attach-image-to-turtle-python/">Images</a></li>
+	  <li>Replacing Items in Python List: <a href = "https://datatofish.com/replace-values-python-list/">Replace</a></li>
+	  <li>Madlibs! Homework Assignment (Work 10): <a href="https://www.stuycs.org/intro01-dw/2021/03/24/a10.html">Madlibs!</a></li>
+	  <li>Turtle Power! Homework Assignment (Work 13): <a href="https://www.stuycs.org/intro01-dw/2021/04/15/a13.html">Turtles!</a></li>
+	  <li>Expanding our Knowledge Homework Assignment (full_site): <a href="https://www.stuycs.org/intro01-dw/2021/02/22/p00.html">Website</a></li> 
+	  <li>Images of the Pieces: Google</li>
+	  <li>"turtle" Library</li>
+	  </ul>
+      </li>
+      <li>
+	<h3>Bugs, Errors and Things to be Aware of</h3>
+	<ul>
+	  <li>
+	    Usually when a pawn reaches the other side of the board, the player controlling the pawn can obtain a queen or any other piece in place of the pawn. However, in our program we are not able to implement this feature due to time constraints and it being difficult to accomplish. 
+	  </li>
+	  <li>
+	    En passant is a special pawn capture in Chess that can occur immediately after a pawn makes a move of 2 squares for its starting square and it could have been captured by an enemy pawn had it advanced only 1 square. This was another feature that we were not able to implement due to its incompatibility with our code. 
+	  </li>
+	  <li>
+	    There is no castling. It is when the king and rook do not move yet, you can move the king two spaces towards the rook and the rook moves next to the king. 
+	  </li>
+	  <li>
+	    A draw will equal a "Game Over" when there is no valid moves left for the enemy team. A draw is when there is no legal moves left but the king is not in checkmate. 
+	  </li>
+	  <li>
+	    If there are two pawns that can move to the same location. 
+	  </li>
+	  <li>
+	    The chess notation that we used is similar to proper chess notation but not the same. 
+	  </li>
+	</ul>
+      </li>
+    </ul>
+
+  </body>
+</html>
